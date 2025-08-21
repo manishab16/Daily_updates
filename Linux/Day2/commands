@@ -1,0 +1,124 @@
+copy
+
+rename
+mv oldanme.txt newname.txt
+
+mv oldfolder/ newfolder
+
+mv newfolder/* . (copyy all under folder to current working directory)
+
+
+file with editing nano
+-edit files with nano
+
+
+locate 
+-locate command searches a database for files and returns a list of return
+locate -s -> show all info abouut directory
+
+
+find command :
+find /home/desktop/
+
+
+
+-----
+view
+
+
+join files togeter using cat commands
+
+
+$cat file1.txt file2.txt file3.txt file4.txt 
+hello 
+there
+you
+beautiful
+
+
+
+$ cat file[1-5].txt > beautiful.txt
+$ cat beautiful.txt 
+hello 
+there
+you
+beautiful
+
+
+$ cat file[1-4].txt | tac
+beautiful
+you
+there
+hello 
+
+reverse files vertically using tac command
+tac beautiful.txt 
+beautiful
+you
+there
+hello 
+
+reverse files horizontally using rev command
+$ rev beautiful.txt 
+ olleh
+ereht
+uoy
+lufituaeb
+
+use head tail to cut out just what you want
+
+===============
+sort data
+sort files and data using sort commands
+
+you can sort tabular data using -k option
+
+ls -lh /etc | head -n 20 | sort -k 6M
+total 1.1M
+-rw-r--r--.  1 root root      1 Jan 30  2023 at.deny
+-rw-r--r--.  1 root root     94 Jan 30  2023 GREP_COLORS
+drwxr-xr-x.  2 root root      6 Jan 29  2023 chkconfig.d
+-rw-r--r--.  1 root root    535 Feb  2  2023 bindresvport.blacklist
+-rw-r--r--.  1 root root   4.6K Feb 17  2023 DIR_COLORS
+-rw-r--r--.  1 root root   4.7K Feb 17  2023 DIR_COLORS.lightbgcolor
+-rw-r--r--.  1 root root   1.5K Jun 23  2020 aliases
+-rw-r--r--.  1 root root   3.0K Jun 23  2020 bashrc
+drwxr-xr-x.  2 root root      6 Jul 29 23:43 binfmt.d
+-rw-r--r--.  1 root root     16 Aug 13 21:08 adjtime
+drwxr-x---.  4 root root    100 Aug 20 09:48 audit
+drwxr-xr-x.  2 root root     30 Aug 13 21:08 bash_completion.d
+drwxr-xr-x.  2 root root    213 Aug 13 21:08 alternatives
+drwxr-xr-x.  3 root root     17 Aug 13 21:08 amazon
+drwxr-xr-x.  3 root root     26 Aug 13 21:08 NetworkManager
+drwxr-xr-x.  4 root root     35 Aug 13 21:08 acpi
+drwxr-xr-x.  6 root root     70 Aug 13 21:07 X11
+lrwxrwxrwx.  1 root root     25 Aug 12 18:01 amazon-linux-release -> ../usr/lib/system-release
+lrwxrwxrwx.  1 root root     29 Aug 12 18:01 amazon-linux-release-cpe -> ../usr/lib/system-release-cpe
+
+
+3nr means sort using comlum 3 and use -n nd -r options
+example 
+
+to sort human reable data use -h option not -n
+===========
+
+archieve
+create and restore
+
+tar -cvf ourarchieve.tar file[1-3].txt
+file1.txt
+file2.txt
+file3.txt
+]$ ls
+file1.txt  file2.txt  file3.txt  ourarchieve.tar
+
+find tar folder
+ls -l | grep .tar 
+-rw-r--r--. 1 ec2-user ec2-user 10240 Aug 20 11:11 ourarchieve.tar
+
+
+compress
+
+gzip ourarchieve.tar 
+[ec2-user@ip-172-31-25-240 ~]$ ls
+beautiful.txt  file1.txt  file2.txt  file3.txt  file4.txt  number.txt  ourarchieve.tar.gz
