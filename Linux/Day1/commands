@@ -165,6 +165,10 @@ hello world!
 $ cat < input.txt 
 hello world!
 
+summary
+standard Input =0, standardoutput =1, standard error =2.
+> will overwrite a file before writing to it
+>> will apend to what's already there
 
 
 alias
@@ -173,3 +177,4 @@ alias
 
 alias aliasName="command1 -options args | command2 -options args"	
 	
+
