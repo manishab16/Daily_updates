@@ -1,0 +1,70 @@
+Day 3 [21-8-2025]
+
+Bash script
+
+#!/bin/bash
+
+mkdir /home/ec2-user/magic
+cd /home/ec2-user/magic
+touch file{1..10}
+ls -lh /home/ec2-user/magic > /home/ec2-user/magic.log
+
+
+$ bash our_script.sh
+
+output script (created folder magic and magic.log file)
+$ ls -l
+total 20
+drwxr-xr-x. 2 ec2-user ec2-user 137 Aug 21 07:13 magic
+-rw-r--r--. 1 ec2-user ec2-user 539 Aug 21 07:13 magic.log
+
+cd magic/
+$ ls
+file1  file10  file2  file3  file4  file5  file6  file7  file8  file9
+
+$ cat magic.log
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file1
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file10
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file2
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file3
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file4
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file5
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file6
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file7
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file8
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file9
+
+
+Note: 
+Bash scripts allows you to store useful commands sequense in files
+Bash script first line #!/bin/bash
+
+
+automation using cron
+
+crontab -e (-e for editing)
+
+use cron to schedule commands and scripts
+crontab edit using crontab -e
+crontab broken up in rows each rows has 6 colum
+clumns are m, h, dom, mon, dow
+
+
+$ crontab -e
+* * * * * echo "hello word" >> /home/ubuntu/hello.txt
+
+hello.txt final generated
+$ ls
+hello.txt
+
+added data one by one
+output
+$ cat hello.txt
+hello word
+hello word
+hello word
+hello word
+hello word
+hello word
+hello word
