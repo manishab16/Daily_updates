@@ -68,3 +68,74 @@ hello word
 hello word
 hello word
 hello word
+
+compling source from source code
+how to access, download, modify, install source code
+
+$ uname -o
+GNU/Linux
+
+
+
+ $cd ~
+ $wget https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.xz
+ $tar -xf coreutils-9.5.tar.xzcd src
+ 
+ $cd coreutils-9.5
+ 
+ $cd src
+
+ $ls | grep ls
+
+ $nano ls.c
+  
+ $sudo yum install gcc
+ $cd ..
+ 
+ $bash configure 
+ 
+ $make
+ 
+ $sudo make install
+
+$ ls
+Hello there you beautiful people 
+coreutils-9.5  coreutils-9.5.tar.xz  crontab  date.txt  error.txt  input.txt  magic  magic.log  our_script.sh  output.txt
+
+removes compling 
+$ make && sudo make install
+
+s ls 
+coreutils-9.5  coreutils-9.5.tar.xz  crontab  date.txt  error.txt  input.txt  magic  magic.log  our_script.sh  output.txt
+
+
+software repositories
+software repository is like a library of software
+on ubuntu 4 repositories
+main - mainted by canonical (free, opensource)
+universe - maintained by comunity (free, open source)
+Restricted - proprietry driverse (Proprietry, maybe opensource)
+Multiverse - limited by copyright of legal issues (Proprietry, may be opensource)
+
+lsb_release -a will tell your distribution codename
+
+apt-cache located in /var/lib/apt/lists
+apt-cache search <search term> will search cache for all packages names appropriate to search term
+apt-cache show <package name> will show detailed information about the package
+
+
+$sudo apt-get update
+
+$sudo apt-get upgrade 
+
+sudo apt-get update updates your cache
+sudo apt-get upgrade upgrades all software on your system
+make sure you update chache before your upgrade
+
+installing new packages
+$apt-cache search xeyes  (give details of xeyes packages )
+x11-apps - X applications
+xfce4-eyes-plugin - eyes that follow your mouse for the Xfce4 panel
+
+
+$ sudo apt-get install x11-apps
