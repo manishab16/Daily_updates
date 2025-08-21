@@ -1,0 +1,175 @@
+Day 1 (18-8-2025)
+
+$echo hello
+hello
+
+$ echo echoooooooooooo
+echoooooooooooo
+
+
+cal -> shows current date with month
+cal
+     August 2025    
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31                  
+
+
+$cal 2017
+                               2017                               
+
+       January               February                 March       
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4             1  2  3  4
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    5  6  7  8  9 10 11
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   12 13 14 15 16 17 18
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   19 20 21 22 23 24 25
+29 30 31               26 27 28               26 27 28 29 30 31   
+                                                                  
+        April                   May                   June        
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1       1  2  3  4  5  6                1  2  3
+ 2  3  4  5  6  7  8    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   28 29 30 31            25 26 27 28 29 30   
+30                                                                
+        July                  August                September     
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1          1  2  3  4  5                   1  2
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    3  4  5  6  7  8  9
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   10 11 12 13 14 15 16
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   17 18 19 20 21 22 23
+23 24 25 26 27 28 29   27 28 29 30 31         24 25 26 27 28 29 30
+30 31                                                             
+       October               November               December      
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7             1  2  3  4                   1  2
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    3  4  5  6  7  8  9
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   10 11 12 13 14 15 16
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   17 18 19 20 21 22 23
+29 30 31               26 27 28 29 30         24 25 26 27 28 29 30
+                                             
+											 
+											 
+date  -> curent date month nd timezone
+$ date
+Thu Aug 21 03:34:55 UTC 2025		
+
+
+
+$ history
+    1  ls
+    2  echo hello
+    3  echo echoooooooooooo
+    4  cal
+    5  cal 2017
+    6  date
+    7  history									 
+	
+	
+	
+	
+which command 	
+	
+$which cal
+/usr/bin/cal
+$ which echo
+/usr/bin/echo	
+
+cal 12 2017
+    December 2017   
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31              
+
+cal -A 1 12 2017 ( option one month(-A) before of Dec month)
+
+cal -A 1 -B 1 12 201( option one monthe before and one month after of Dec month)
+
+
+standrd output ->
+  
+$ cat > output.txt
+hello   
+^C
+
+$ cat output.txt 
+hello 
+ 
+truncate file 
+$ cat 1>output.txt
+wow!
+^C
+
+$ cat output.txt 
+wow!
+
+appending file
+$ cat 1>> output.txt
+Linux is amazing!!
+^C
+$ cat output.txt 
+wow!
+Linux is amazing!! 
+ 
+	
+
+standard input + standard error
+$ cat -k bla
+cat: invalid option -- 'k'
+Try 'cat --help' for more information.
+
+add only latest output
+$ cat -k bla 2> error.txt
+$ cat error.txt 
+cat: invalid option -- 'k'
+Try 'cat --help' for more information.	
+
+append error file 
+$ cat -k bla 2>> error.txt
+
+$ cat error.txt 
+cat: invalid option -- 'k'
+Try 'cat --help' for more information.
+cat: invalid option -- 'k'
+Try 'cat --help' for more information.
+cat: invalid option -- 'k'
+Try 'cat --help' for more information.
+
+
+$ cat >> output.txt 2>> error.txt
+hello
+Linux
+^C
+$ ls
+error.txt  output.txt
+
+$ cat output.txt 
+hello
+Linux
+
+read standard  
+$ cat > input.txt
+hello world!
+^C
+
+$ cat < input.txt 
+hello world!
+
+
+
+alias
+-nickname for command or pipeline
+-.bash_aliases file in ur home directory
+
+alias aliasName="command1 -options args | command2 -options args"	
+	
