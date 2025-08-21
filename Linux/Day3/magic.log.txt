@@ -1,0 +1,12 @@
+$ cat magic.log
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file1
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file10
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file2
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file3
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file4
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file5
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file6
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file7
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file8
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug 21 07:13 file9
